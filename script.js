@@ -62,8 +62,8 @@ const observador = new IntersectionObserver(
         entradas.forEach((entrada) => {
             if (entrada.isIntersecting) {
                 linksMenu.forEach((link) => {
-                    const ehDestaSecao = link.getAttribute("href") === `#${entrada.target.id}`;
-                    link.classList.toggle("ativo", ehDestaSecao);
+                    const destaSecao = link.getAttribute("href") === `#${entrada.target.id}`;
+                    link.classList.toggle("ativo", destaSecao);
                 });
             }
         });
