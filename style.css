@@ -83,4 +83,7 @@ html {
             grid-column: 1;
         }
     }
+    .divImagens{
+        width: 50%;
+    }
 }
