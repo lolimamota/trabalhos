@@ -27,9 +27,13 @@
     --fonteTitulo: "Playfair Display", serif;
     --fonteTexto: "Montserrat", sans-serif;
 
-    /* efeito de papel rasgado (topo e base irregulares) */
-    --bordaRasgada: polygon(0 1.4rem, 5% 0.4rem, 10% 1.2rem, 16% 0.2rem, 23% 1.1rem, 30% 0.3rem, 37% 1.3rem, 44% 0.5rem, 51% 1.2rem, 58% 0.2rem, 65% 1.4rem, 72% 0.4rem, 79% 1.2rem, 86% 0.3rem, 93% 1.3rem, 100% 0.5rem,
-            100% calc(100% - 0.6rem), 94% calc(100% - 1.4rem), 87% calc(100% - 0.4rem), 80% calc(100% - 1.3rem), 72% calc(100% - 0.3rem), 65% calc(100% - 1.5rem), 57% calc(100% - 0.5rem), 49% calc(100% - 1.2rem), 42% calc(100% - 0.2rem), 34% calc(100% - 1.4rem), 27% calc(100% - 0.4rem), 19% calc(100% - 1.3rem), 12% calc(100% - 0.3rem), 6% calc(100% - 1.2rem), 0 calc(100% - 0.5rem));
+    /* papel rasgado: pontos com variação irregular (A e B para as bordas não se repetirem) rasgado = contorno do papel | fibra = faixa branca logo abaixo da rasgadura */
+    --fibraPapel: #FFF7FB;
+    --rasgadoA: polygon(0 2.1rem, 0.5% 1.43rem, 1.4% 1.76rem, 2.1% 1.95rem, 2.6% 1.13rem, 3.4% 1.01rem, 3.9% 0.89rem, 4.7% 0.8rem, 5.2% 0.78rem, 5.8% 0.72rem, 6.6% 0.6rem, 7.6% 1.04rem, 8.1% 0.96rem, 8.8% 1.03rem, 9.6% 0.98rem, 10.7% 1.05rem, 11.6% 0.88rem, 12.3% 1.11rem, 13.4% 0.38rem, 13.9% 0.15rem, 14.9% 0.73rem, 15.6% 0.66rem, 16.2% 0.58rem, 16.8% 0.71rem, 17.4% 1.06rem, 18.4% 1.51rem, 19% 1.43rem, 19.9% 1.09rem, 20.8% 1.71rem, 21.5% 1.59rem, 22.3% 1.13rem, 22.9% 1.49rem, 23.4% 1.55rem, 24% 1.38rem, 24.9% 0.92rem, 25.7% 1.23rem, 26.4% 1.85rem, 27.2% 1.6rem, 28% 1.94rem, 28.7% 2.1rem, 29.6% 1.51rem, 30.6% 1.49rem, 31.2% 1.44rem, 32.1% 1.49rem, 32.9% 0.76rem, 33.9% 0.98rem, 34.8% 1.25rem, 35.5% 0.84rem, 36.6% 1.08rem, 37.2% 1.53rem, 37.9% 1.38rem, 38.9% 1.24rem, 39.5% 0.84rem, 40.3% 0.73rem, 40.8% 0.77rem, 41.7% 0.54rem, 42.6% 0.75rem, 43.5% 0.57rem, 44.5% 0.74rem, 45.2% 0.76rem, 46.1% 0.68rem, 47% 0.68rem, 47.8% 1.02rem, 48.6% 1.28rem, 49.6% 1.19rem, 50.7% 1.66rem, 51.4% 0.81rem, 52.3% 1.05rem, 52.9% 1.33rem, 53.8% 1.67rem, 54.7% 1.05rem, 55.8% 1.95rem, 56.8% 1.62rem, 57.5% 1.6rem, 58.2% 1.6rem, 59.1% 1.6rem, 59.6% 1.26rem, 60.4% 1.04rem, 61% 1.17rem, 61.5% 0.96rem, 62.1% 1.31rem, 63% 0.91rem, 63.6% 1.25rem, 64.3% 1.53rem, 65% 1.42rem, 66% 1.35rem, 66.6% 1.23rem, 67.3% 1.09rem, 68.2% 0.72rem, 69.2% 0.89rem, 70.2% 0.47rem, 71.2% 0.2rem, 71.9% 0.21rem, 72.6% 0.64rem, 73.3% 0.49rem, 74.4% 0.67rem, 75.5% 0.99rem, 76% 0.95rem, 76.6% 1.08rem, 77.3% 1.04rem, 77.9% 1.21rem, 78.7% 0.86rem, 79.6% 0.47rem, 80.2% 0.56rem, 80.7% 1.08rem, 81.5% 0.78rem, 82.2% 1.2rem, 83% 1.45rem, 84.1% 1.82rem, 85% 1.41rem, 85.8% 2.06rem, 86.7% 1.9rem, 87.6% 1.12rem, 88.1% 1.38rem, 89.2% 1.15rem, 90.2% 0.8rem, 91.2% 1.07rem, 92.2% 1.4rem, 92.9% 1.38rem, 93.6% 1.46rem, 94.2% 1.42rem, 95.1% 1.78rem, 95.6% 1.27rem, 96.2% 0.91rem, 96.8% 1.04rem, 97.4% 0.77rem, 98.1% 0.29rem, 98.6% 0.66rem, 99.1% 0.23rem, 99.7% 0.6rem, 100% 0.86rem, 100% 100%, 0 100%);
+    --fibraA: polygon(0 0, 100% 0, 100% 1.96rem, 99.7% 1.47rem, 99.1% 0.84rem, 98.6% 1.33rem, 98.1% 1.39rem, 97.4% 1.97rem, 96.8% 2.21rem, 96.2% 1.74rem, 95.6% 2.27rem, 95.1% 2.44rem, 94.2% 2.12rem, 93.6% 2.03rem, 92.9% 2.33rem, 92.2% 2.23rem, 91.2% 2.3rem, 90.2% 1.83rem, 89.2% 1.8rem, 88.1% 2.35rem, 87.6% 2.17rem, 86.7% 2.74rem, 85.8% 3.02rem, 85% 1.95rem, 84.1% 2.29rem, 83% 2.44rem, 82.2% 2.31rem, 81.5% 1.63rem, 80.7% 2.18rem, 80.2% 1.73rem, 79.6% 1.44rem, 78.7% 2.1rem, 77.9% 2.36rem, 77.3% 2.09rem, 76.6% 1.72rem, 76% 1.72rem, 75.5% 1.44rem, 74.4% 1.52rem, 73.3% 0.95rem, 72.6% 1.86rem, 71.9% 1.44rem, 71.2% 1rem, 70.2% 1.15rem, 69.2% 1.88rem, 68.2% 1.23rem, 67.3% 2.13rem, 66.6% 1.73rem, 66% 2.31rem, 65% 2.14rem, 64.3% 2.38rem, 63.6% 2.09rem, 63% 1.44rem, 62.1% 1.91rem, 61.5% 1.42rem, 61% 1.9rem, 60.4% 1.73rem, 59.6% 1.96rem, 59.1% 2.18rem, 58.2% 2.47rem, 57.5% 2.8rem, 56.8% 2.44rem, 55.8% 3.08rem, 54.7% 2.01rem, 53.8% 2.46rem, 52.9% 2.34rem, 52.3% 1.62rem, 51.4% 1.98rem, 50.7% 2.33rem, 49.6% 1.73rem, 48.6% 2.52rem, 47.8% 1.97rem, 47% 1.48rem, 46.1% 1.71rem, 45.2% 1.48rem, 44.5% 1.32rem, 43.5% 1.41rem, 42.6% 1.37rem, 41.7% 1.11rem, 40.8% 1.35rem, 40.3% 1.71rem, 39.5% 1.35rem, 38.9% 1.8rem, 37.9% 2.27rem, 37.2% 2.68rem, 36.6% 1.92rem, 35.5% 1.84rem, 34.8% 2.19rem, 33.9% 2.04rem, 32.9% 1.83rem, 32.1% 2.39rem, 31.2% 2.33rem, 30.6% 2.38rem, 29.6% 2.1rem, 28.7% 2.7rem, 28% 2.82rem, 27.2% 2.38rem, 26.4% 2.67rem, 25.7% 1.79rem, 24.9% 1.84rem, 24% 2.04rem, 23.4% 2.7rem, 22.9% 2.36rem, 22.3% 1.59rem, 21.5% 2.32rem, 20.8% 2.82rem, 19.9% 2.26rem, 19% 2.02rem, 18.4% 2.28rem, 17.4% 2.15rem, 16.8% 1.3rem, 16.2% 1.66rem, 15.6% 1.18rem, 14.9% 1.56rem, 13.9% 1.1rem, 13.4% 1.01rem, 12.3% 2.32rem, 11.6% 1.69rem, 10.7% 1.7rem, 9.6% 1.71rem, 8.8% 2.07rem, 8.1% 2.09rem, 7.6% 1.67rem, 6.6% 1.48rem, 5.8% 1.46rem, 5.2% 1.92rem, 4.7% 1.27rem, 3.9% 1.76rem, 3.4% 1.59rem, 2.6% 1.85rem, 2.1% 2.79rem, 1.4% 2.89rem, 0.5% 2.15rem, 0 3.04rem);
+    --rasgadoB: polygon(0 0.89rem, 0.6% 0.9rem, 1.4% 1.26rem, 2.2% 1.36rem, 3% 1.49rem, 3.6% 1.52rem, 4.2% 1.75rem, 4.9% 1.42rem, 5.6% 1.13rem, 6.3% 1.26rem, 6.9% 1.2rem, 7.4% 1.1rem, 8.3% 1.08rem, 9.1% 1.41rem, 9.9% 1.31rem, 10.8% 1.63rem, 11.6% 1.76rem, 12.1% 2.1rem, 13.1% 1.73rem, 13.9% 1.28rem, 14.8% 1.54rem, 15.7% 0.78rem, 16.8% 0.97rem, 17.5% 1.18rem, 18.4% 0.78rem, 19.2% 0.82rem, 20% 1.31rem, 20.9% 1.06rem, 21.6% 0.65rem, 22.1% 0.93rem, 22.9% 1.03rem, 23.8% 0.5rem, 24.7% 0.69rem, 25.5% 0.83rem, 26.4% 0.26rem, 27% 0.15rem, 27.6% 0.7rem, 28.3% 1.24rem, 29.3% 1.08rem, 29.9% 0.85rem, 30.4% 1.21rem, 31% 1.49rem, 31.5% 1.46rem, 32.2% 1.42rem, 33% 1.18rem, 34% 1.2rem, 34.7% 0.72rem, 35.4% 1.12rem, 36.1% 1.11rem, 36.8% 1.11rem, 37.8% 1.36rem, 38.6% 1.67rem, 39.3% 1.82rem, 39.8% 1.93rem, 40.8% 1.6rem, 41.7% 1.68rem, 42.7% 1.6rem, 43.4% 0.84rem, 44.2% 1.4rem, 45.2% 1.3rem, 46.1% 1.07rem, 47.2% 1.39rem, 47.8% 1.39rem, 48.8% 1.12rem, 49.4% 1.2rem, 50.1% 1.49rem, 50.6% 1.25rem, 51.6% 0.48rem, 52.5% 0.79rem, 53.6% 0.15rem, 54.6% 0.29rem, 55.7% 0.7rem, 56.5% 0.49rem, 57.6% 1.13rem, 58.5% 0.96rem, 59.2% 1.16rem, 60.3% 1.3rem, 61.1% 1.01rem, 61.7% 1.1rem, 62.2% 1.02rem, 63% 0.95rem, 63.6% 1.29rem, 64.7% 1.22rem, 65.7% 1.53rem, 66.4% 1.58rem, 66.9% 2.03rem, 67.8% 1.5rem, 68.4% 1.75rem, 69.2% 2.1rem, 70.2% 1.74rem, 70.8% 1.43rem, 71.6% 2.08rem, 72.6% 1.35rem, 73.4% 0.86rem, 74.1% 1.12rem, 75.1% 1.4rem, 76.1% 0.96rem, 77.1% 1.17rem, 78.1% 1.42rem, 78.8% 1.18rem, 79.7% 1.28rem, 80.7% 0.52rem, 81.6% 0.35rem, 82.2% 0.46rem, 82.9% 0.47rem, 83.7% 0.36rem, 84.6% 0.19rem, 85.5% 0.67rem, 86.3% 1.2rem, 87.3% 1.12rem, 87.9% 1.16rem, 88.7% 1.05rem, 89.4% 0.55rem, 90.3% 0.61rem, 91.3% 1.01rem, 91.9% 0.55rem, 93% 1.06rem, 93.5% 1.26rem, 94.4% 1.33rem, 95.2% 1.19rem, 95.8% 1.42rem, 96.7% 1.84rem, 97.5% 1.58rem, 98.2% 1.52rem, 99.2% 1.85rem, 99.7% 1.64rem, 100% 1.51rem, 100% 100%, 0 100%);
+    --fibraB: polygon(0 0, 100% 0, 100% 2.55rem, 99.7% 2.5rem, 99.2% 3.02rem, 98.2% 2.47rem, 97.5% 2.63rem, 96.7% 2.82rem, 95.8% 2.56rem, 95.2% 1.73rem, 94.4% 2.41rem, 93.5% 1.75rem, 93% 1.95rem, 91.9% 1.6rem, 91.3% 2.25rem, 90.3% 1.84rem, 89.4% 1.56rem, 88.7% 1.69rem, 87.9% 2.4rem, 87.3% 1.66rem, 86.3% 2.18rem, 85.5% 1.41rem, 84.6% 0.88rem, 83.7% 0.93rem, 82.9% 1.4rem, 82.2% 1.67rem, 81.6% 1.31rem, 80.7% 1.4rem, 79.7% 2.47rem, 78.8% 2.4rem, 78.1% 2.46rem, 77.1% 2.24rem, 76.1% 2.16rem, 75.1% 2.43rem, 74.1% 1.9rem, 73.4% 1.66rem, 72.6% 2.42rem, 71.6% 2.75rem, 70.8% 2.49rem, 70.2% 2.32rem, 69.2% 3.34rem, 68.4% 2.64rem, 67.8% 2.65rem, 66.9% 2.56rem, 66.4% 2.43rem, 65.7% 2.39rem, 64.7% 2.43rem, 63.6% 2.22rem, 63% 2.04rem, 62.2% 1.9rem, 61.7% 1.96rem, 61.1% 2.24rem, 60.3% 1.86rem, 59.2% 1.77rem, 58.5% 1.95rem, 57.6% 2.26rem, 56.5% 1.35rem, 55.7% 1.79rem, 54.6% 1.38rem, 53.6% 1.21rem, 52.5% 2.02rem, 51.6% 0.98rem, 50.6% 2.36rem, 50.1% 2.53rem, 49.4% 2.17rem, 48.8% 1.78rem, 47.8% 2.61rem, 47.2% 1.9rem, 46.1% 1.61rem, 45.2% 1.84rem, 44.2% 2.41rem, 43.4% 1.74rem, 42.7% 2.82rem, 41.7% 2.57rem, 40.8% 2.26rem, 39.8% 2.54rem, 39.3% 2.87rem, 38.6% 2.63rem, 37.8% 1.87rem, 36.8% 1.98rem, 36.1% 2.04rem, 35.4% 2.1rem, 34.7% 1.95rem, 34% 1.69rem, 33% 2.3rem, 32.2% 2.4rem, 31.5% 2.4rem, 31% 2.37rem, 30.4% 2.32rem, 29.9% 1.84rem, 29.3% 1.86rem, 28.3% 2.03rem, 27.6% 1.32rem, 27% 1.18rem, 26.4% 1.37rem, 25.5% 1.39rem, 24.7% 1.85rem, 23.8% 1.55rem, 22.9% 1.83rem, 22.1% 1.88rem, 21.6% 1.27rem, 20.9% 1.62rem, 20% 2.24rem, 19.2% 1.73rem, 18.4% 1.82rem, 17.5% 1.65rem, 16.8% 2.2rem, 15.7% 1.96rem, 14.8% 2.53rem, 13.9% 1.8rem, 13.1% 2.47rem, 12.1% 2.58rem, 11.6% 2.41rem, 10.8% 2.77rem, 9.9% 1.86rem, 9.1% 2.26rem, 8.3% 1.7rem, 7.4% 1.75rem, 6.9% 2.31rem, 6.3% 1.98rem, 5.6% 1.86rem, 4.9% 2.35rem, 4.2% 2.6rem, 3.6% 2.03rem, 3% 2.36rem, 2.2% 2.36rem, 1.4% 1.77rem, 0.6% 1.49rem, 0 2.03rem);
+
 }
 
 html {
@@ -222,23 +226,25 @@ body {
         .hannah,
         .miley {
             filter:
-                drop-shadow(0.3vw 0 0 var(--rosaBorder)) drop-shadow(-0.3vw 0 0 var(--rosaBorder)) drop-shadow(0 0.3vw 0 var(--rosaBorder)) drop-shadow(0 -0.3vw 0 var(--rosaBorder)) drop-shadow(0 0 1.5vw rgba(255, 42, 133, 0.45));
+                drop-shadow(0.3vw 0 0 var(--rosaBorder))
+                drop-shadow(-0.3vw 0 0 var(--rosaBorder))
+                drop-shadow(0 0.3vw 0 var(--rosaBorder))
+                drop-shadow(0 -0.3vw 0 var(--rosaBorder))
+                drop-shadow(0 0 1.5vw rgba(255, 42, 133, 0.45));
         }
 
         .hannah {
             position: relative;
-            z-index: 2;
             grid-column: 1;
+            z-index: 0;
             grid-row: 1;
             width: 100%;
-            margin-bottom: -1.5vw;
-            /* a imagem tem uma sobra transparente embaixo */
+            margin-bottom: -1.5vw; /* a imagem tem uma sobra transparente embaixo */
         }
 
         /* margem negativa = Miley entra por trás da Hannah */
         .miley {
             position: relative;
-            z-index: 1;
             grid-column: 2;
             grid-row: 1;
             width: 100%;
@@ -268,9 +274,22 @@ body {
 main {
     section {
         position: relative;
-        margin-top: -1.4rem;
+        margin-top: -2.2rem;
         padding: 9rem 5vw 10rem;
-        clip-path: var(--bordaRasgada);
+        clip-path: var(--rasgadoB);
+
+        /* fibra branca que aparece na rasgadura do papel */
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3.6rem;
+            background-color: var(--fibraPapel);
+            clip-path: var(--fibraA);
+            pointer-events: none;
+        }
 
         h2 {
             font-family: var(--fonteTitulo);
@@ -337,6 +356,11 @@ main {
         align-items: center;
         background-color: var(--roxoPrincipal);
         color: var(--textos);
+        clip-path: var(--rasgadoB);
+
+        &::before {
+            clip-path: var(--fibraB);
+        }
 
         .divAssess {
             grid-column: 1;
@@ -476,9 +500,24 @@ main {
 
 /* footer */
 .footer {
-    padding: 4rem 5vw 5rem;
+    position: relative;
+    margin-top: -2.2rem;
+    padding: 8rem 5vw 5rem;
     text-align: center;
     background-color: var(--roxoBg);
+    clip-path: var(--rasgadoB);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3.6rem;
+        background-color: var(--fibraPapel);
+        clip-path: var(--fibraB);
+        pointer-events: none;
+    }
 
     h2 {
         font-family: var(--fonteTexto);
