@@ -216,9 +216,9 @@ body {
         .cristalball {
             position: absolute;
             z-index: 0;
-            top: 5vw;
-            right: -2vw;
-            width: 62vw;
+            top: 3vw;
+            right: -5vw;
+            width: 80vw;
             pointer-events: none;
         }
 
